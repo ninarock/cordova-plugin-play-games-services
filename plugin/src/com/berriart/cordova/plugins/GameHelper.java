@@ -40,7 +40,7 @@ import com.google.android.gms.games.GamesActivityResultCodes;
 import com.google.android.gms.games.multiplayer.Invitation;
 import com.google.android.gms.games.multiplayer.Multiplayer;
 import com.google.android.gms.games.multiplayer.turnbased.TurnBasedMatch;
-import com.google.android.gms.games.request.GameRequest;
+//import com.google.android.gms.games.request.GameRequest;
 import com.google.android.gms.plus.Plus;
 import com.google.android.gms.plus.Plus.PlusOptions;
 
@@ -171,7 +171,8 @@ public class GameHelper implements GoogleApiClient.ConnectionCallbacks,
      * If we have incoming requests when we connected to the games client, they
      * are here. Otherwise, it's null.
      */
-    ArrayList<GameRequest> mRequests;
+    //ArrayList<GameRequest> mRequests;
+    ArrayList<String> mRequests;
 
     // Listener
     GameHelperListener mListener = null;
@@ -489,7 +490,7 @@ public class GameHelper implements GoogleApiClient.ConnectionCallbacks,
      *                                            handled.
      * @return The requests, or null if none were received.
      */
-    public ArrayList<GameRequest> getRequests() {
+    public ArrayList<String> getRequests() {
         if (!mGoogleApiClient.isConnected()) {
             Log.w(TAG, "Warning: getRequests() should only be called "
                     + "when signed in, "
@@ -711,8 +712,8 @@ public class GameHelper implements GoogleApiClient.ConnectionCallbacks,
             }
 
             // Do we have any requests pending?
-            mRequests = Games.Requests
-                    .getGameRequestsFromBundle(connectionHint);
+            //mRequests = Games.Requests
+            //        .getGameRequestsFromBundle(connectionHint);
             if (!mRequests.isEmpty()) {
                 // We have requests in onConnected's connectionHint.
                 debugLog("onConnected: connection hint has " + mRequests.size()
