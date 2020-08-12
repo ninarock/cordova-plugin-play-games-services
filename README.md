@@ -1,8 +1,8 @@
 # Cordova Plugin For Play Games Services
 
-Cordova Plugin For Google Play Games Services (Fork of [ptgamr/cordova-google-play-game](https://github.com/ptgamr/cordova-plugin-play-games-services))
+Cordova Plugin For Google Play Games Services (Fork from [artberri/cordova-plugin-play-games-services](https://github.com/artberri/cordova-plugin-play-games-services))
 
-Modified to include the new Google Play Services (GoogleApiAvailability) and new methods for Leaderboards and Achievements.
+Modified to include the new version of Google Play Services.
 
 **Before you start:**
 
